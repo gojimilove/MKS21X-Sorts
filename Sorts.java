@@ -19,8 +19,9 @@ public class Sorts {
 					minIndex = j;
 					
 				}
-				System.out.println(""+minIndex);
 			}
+			System.out.println("Index: "+minIndex);
+			System.out.println("Value: "+ary[minIndex]);
 			//swap that index and index i
 			System.out.println("\n"+ary[i]);
 			System.out.println(""+ary[minIndex]);
