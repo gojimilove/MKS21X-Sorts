@@ -12,12 +12,21 @@ public class Driver {
 
 	public static void main(String[] args) {
 		System.out.println("==========\nSELECTIONSORTED:\n");
-		int[] baddies = {-1, 6, 3999, 20, -37, -92, 3, 169, 3, 6};
+		int[] selection = {-1, 6, 3999, 20, -37, -92, 3, 169, 3, 6};
 		System.out.println("original array:");
-		printArray(baddies);
-		Sorts.selectionsort(baddies);
+		printArray(selection);
+		Sorts.selectionSort(selection);
 		System.out.println("sorted array:");
-		printArray(baddies);
+		printArray(selection);
+		System.out.println("==========");
+
+		System.out.println("BUBBLESORTED:\n");
+		int[] bubbles = {5, 1, 12, -5, 16};
+		System.out.println("original array:");
+		printArray(bubbles);
+		Sorts.bubbleSort(bubbles);
+		System.out.println("sorted array:");
+		printArray(bubbles);
 		System.out.println("==========");
 	}
 }
