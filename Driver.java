@@ -28,5 +28,14 @@ public class Driver {
 		System.out.println("sorted array:");
 		printArray(bubbles);
 		System.out.println("==========");
+
+		System.out.println("INSERTIONSORTED:\n");
+		int[] insertion  = {4, 3, 2, 10, 12, 1, 5, 6};
+		System.out.println("original array:");
+		printArray(insertion);
+		Sorts.insertionSort(insertion);
+		System.out.println("sorted array:");
+		printArray(insertion);
+		System.out.println("==========");
 	}
 }

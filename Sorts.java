@@ -24,11 +24,12 @@ public class Sorts {
   *Upon completion, the elements of the array will be in increasing order.
   *@param data  the elements to be sorted.
   */
-	public static void bubbleSort(int[] data){
+	public static void bubbleSort(int[] data) {
 		for (int i = 0; i < data.length - 1; i++) { //(n-1)) runs
 			//System.out.println("RUN"+(i+1));
 			for (int j = 0; j < data.length - (i + 1); j++) {
 				int swapped = data[j];
+				//System.out.println(""+(data[j] > data[j + 1]));
 				//swap pair of numbers if first one is bigger
 				if (data[j] > data[j + 1]) {
 					data[j] = data[j + 1];
@@ -36,6 +37,17 @@ public class Sorts {
 				}
 				//System.out.println(""+data[j]+", "+data[j+1]);
 			}
+		}
+	}
+
+	public static void insertionSort(int[] nums) {
+		for (int i = 1; i < nums.length; i++) {
+			int current = nums[i];
+			int j = 0;
+			for (j = i; j > 0 && current <= nums[j - 1]; j--) {
+				nums[j] = nums[j - 1]; //move int at index (j-1) to index j
+			}
+			nums[j] = current; //move int current to index j
 		}
 	}
 }
